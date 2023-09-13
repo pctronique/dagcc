@@ -35,7 +35,7 @@ NAME_GCC_CONTAINER=tintin_gcc
 
 
 ### Installer le conteneur
-Vous pouvez créer votre projet.
+Vous pouvez créer votre conteneur.
 ```
 $ ./install.sh
 ```
