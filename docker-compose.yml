@@ -9,7 +9,7 @@ services:
     linux_agcc:
         container_name: ${NAME_GCC_CONTAINER}
         restart: always
-        build: docker/linux_agcc
+        build: .docker/linux_agcc
         tty: true
         stdin_open: true
         volumes:
