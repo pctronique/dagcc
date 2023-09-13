@@ -12,7 +12,6 @@ La base docker pour un projet en assembleur.
             <li><a href="#installer-le-conteneur">Installer le conteneur</a></li>
         </ul>
     </li>
-    <li><a href="#le-dossier-du-projet">Le dossier du projet</a></li>
     <li><a href="#rechercher-un-package-docker">Rechercher un package (Docker)</a></li>
     <li>
         <a href="#install-un-package-docker">Install un package (Docker)</a>
@@ -21,6 +20,7 @@ La base docker pour un projet en assembleur.
             <li><a href="#dans-dockerfile">Dans Dockerfile</a></li>
         </ul>
     </li>
+    <li><a href="#le-dossier-du-projet">Le dossier du projet</a></li>
   </ol>
 </details>
 
@@ -44,9 +44,6 @@ Vous pouvez créer votre conteneur.
 $ ./install.sh
 ```
 
-## Le dossier du projet
-Votre code devra être placé dans le dossier "**project**"
-
 ## Rechercher un package (Docker)
 Si vous avez besoin d'un package pour votre projet dans le conteneur. Vous pouvez rechercher les packages disponibles pour le conteneur.
 ```
@@ -66,3 +63,6 @@ Quand vous installez un package, vous devez aussi le rajouter dans le fichier "*
 ```
 RUN apt install name_package
 ```
+
+## Le dossier du projet
+Votre code devra être placé dans le dossier "**project**"
