@@ -32,9 +32,9 @@ Modifier le fichier .env :
 ```
 NAME_GCC_CONTAINER=dagcc_gcc
 ```
-Par le nom de votre projet, par exemple 'tintin' :
+Par le nom de votre projet, par exemple 'nameProject' :
 ```
-NAME_GCC_CONTAINER=tintin_gcc
+NAME_GCC_CONTAINER=nameProject_gcc
 ```
 
 
