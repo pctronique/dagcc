@@ -1,4 +1,4 @@
-FROM gcc:9.3
+FROM gcc:latest
 
 VOLUME "/home/project"
 WORKDIR "/home/project"
