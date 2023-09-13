@@ -24,6 +24,15 @@ La base docker pour un projet en assembleur.
 Vous devez avoir installé Docker.
 Pour la création du conteneur docker pour le projet.
 ### Le fichier .env
+Modifier le fichier .env :
+```
+NAME_GCC_CONTAINER=dagcc_gcc
+```
+Par le nom de votre projet, par exemple 'tintin' :
+```
+NAME_GCC_CONTAINER=tintin_gcc
+```
+
 
 ### Installer le conteneur
 Vous pouvez créer votre projet.
