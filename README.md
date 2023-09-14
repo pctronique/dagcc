@@ -5,6 +5,7 @@ La base docker pour un projet en assembleur.
 <details>
   <summary>Table des matières</summary>
   <ol>
+    <li><a href="#installé-à-la-base-du-projet-docker">Installé à la base du projet docker</a></li>
     <li>
         <a href="#création-du-conteneur-docker">Création du conteneur (Docker)</a>
         <ul>
@@ -24,6 +25,10 @@ La base docker pour un projet en assembleur.
     <li><a href="#le-dossier-du-projet">Le dossier du projet</a></li>
   </ol>
 </details>
+    
+## Installé à la base du projet docker
+* gcc
+* nasm
 
 ## Création du conteneur (Docker)
 Vous devez avoir installé Docker.
