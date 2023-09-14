@@ -27,8 +27,8 @@ La base docker pour un projet en assembleur.
 </details>
     
 ## Installé à la base du projet docker
-* gcc
-* nasm
+* [docker gcc](https://hub.docker.com/_/gcc)
+* nasm (docker gcc)
 
 ## Création du conteneur (Docker)
 Vous devez avoir installé Docker.
@@ -79,6 +79,11 @@ FROM gcc:latest
 ```
 FROM gcc:13.2.0
 ```
+<br />
+
+> [!WARNING]
+> Il est indispensable de le faire pour pouvoir utiliser un conteneur identique des années plus tard.
+
 
 ### Dans Dockerfile
 Quand vous installez un package, vous devez aussi le rajouter dans le fichier "**.docker/linux_agcc/Dockerfile**", pour le conserver. Vous devez ajouter la ligne suivante à la fin du fichier avec le bon nom de package.
