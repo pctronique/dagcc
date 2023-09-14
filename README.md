@@ -10,6 +10,7 @@ La base docker pour un projet en assembleur.
         <ul>
             <li><a href="#le-fichier-env">Le fichier .env</a></li>
             <li><a href="#installer-le-conteneur">Installer le conteneur</a></li>
+            <li><a href="#modifier-les-versions">Modifier les versions</a></li>
         </ul>
     </li>
     <li><a href="#rechercher-un-package-docker">Rechercher un package (Docker)</a></li>
@@ -56,6 +57,17 @@ Si vous avez besoin d'installer un package dans votre conteneur.
 ```
 $ ./bin/terminal.sh
 # apt install name_package
+```
+
+### Modifier les versions
+Sur le projet actuel, on utilise les nouvelles versions ce qui peut poser des problèmes sur le projet par la suite. Il est préférable d'utiliser la version utilisée lors de la création du projet.
+```
+$ ./bin/terminal.sh
+# gcc -v
+```
+Dand le fichier "**.docker/linux_agcc/Dockerfile**", remplacé '**latest**' par la bonne version disponible pour docker :
+```
+FROM gcc:latest
 ```
 
 ### Dans Dockerfile
