@@ -1,11 +1,16 @@
 # dagcc (Docker Asm GCC)
 
-La base docker pour un projet en assembleur.
-
 <details>
   <summary>Table des matières</summary>
   <ol>
-    <li><a href="#installé-à-la-base-du-projet-docker">Installé à la base du projet docker</a></li>
+    <li>
+        <a href="#présentation">Présentation</a>
+        <ul>
+            <li><a href="#l-avantage-d-utiliser-docker">L'avantage d'utiliser docker</a></li>
+            <li><a href="#conteneur-asm">Conteneur asm</a></li>
+            <li><a href="#autres-conteneurs">Autres conteneurs</a></li>
+        </ul>
+    </li>
     <li>
         <a href="#création-du-conteneur-docker">Création du conteneur (Docker)</a>
         <ul>
@@ -25,10 +30,31 @@ La base docker pour un projet en assembleur.
     <li><a href="#le-dossier-du-projet">Le dossier du projet</a></li>
   </ol>
 </details>
-    
-## Installé à la base du projet docker
-* [docker gcc](https://hub.docker.com/_/gcc)
-* nasm (docker gcc)
+
+## Présentation
+La base docker pour un projet en assembleur. Ceci est une base, vous pouvez le modifier selon vos besoins.<br />
+> [!WARNING]
+> Vous devez installer docker pour pouvoir l'utiliser.
+
+### L'avantage d'utiliser docker
+Lorsque vos faites un projet avec docker vous devez transmettre la totalité du projet, les fichiers de création des conteneurs et le code. Pour ce projet, vous devez transmettre le contenu en totalité du dossier "**dgcc**" (**que vous pouvez et surtout devez le renommer au nom de votre projet**) dans un git.<br />
+Les avantages :<br />
+* Pas de programme à installer sur votre pc (à part docker et un éditeur ou IDE)
+* Travailler à plusieurs avec les mêmes conteneurs à l'identique
+* Prêt à travailler directement sur le code après la création des conteneurs
+<br /> Après installation des conteneurs, on peut directement continuer le code.
+
+### Conteneur asm
+Il est conçu à partir de l'image du [docker gcc](https://hub.docker.com/_/gcc).<br />
+Il contiendra vos codes.<br />
+Il installe aussi dans le conteneur :<br />
+* [nasm](https://www.nasm.us/)
+
+<br /> 
+C'est dans ce conteneur que vous allez placer vos codes c ou c++, dans le dossier "**project**" (qui est lié au conteneur).
+
+### Autres conteneurs
+Vous pouvez installer d'autres conteneurs, comme par exemple le conteneur pour une SGBD. Ici, je donne seulement la base du code.
 
 ## Création du conteneur (Docker)
 Vous devez avoir installé Docker.
@@ -50,20 +76,6 @@ Vous pouvez créer votre conteneur.
 $ ./install.sh
 ```
 
-## Rechercher un package (Docker)
-Si vous avez besoin d'un package pour votre projet dans le conteneur. Vous pouvez rechercher les packages disponibles pour le conteneur.
-```
-$ ./bin/terminal.sh
-# apt-cache search name_package
-```
-
-## Install un package (Docker)
-Si vous avez besoin d'installer un package dans votre conteneur.
-```
-$ ./bin/terminal.sh
-# apt install name_package
-```
-
 ### Modifier les versions
 > [!WARNING]
 > Il est indispensable de le faire pour pouvoir utiliser un conteneur identique des années plus tard.
@@ -81,6 +93,20 @@ FROM gcc:latest
 ```
 ```
 FROM gcc:13.2.0
+```
+
+## Rechercher un package (Docker)
+Si vous avez besoin d'un package pour votre projet dans le conteneur. Vous pouvez rechercher les packages disponibles pour le conteneur.
+```
+$ ./bin/terminal.sh
+# apt-cache search name_package
+```
+
+## Install un package (Docker)
+Si vous avez besoin d'installer un package dans votre conteneur.
+```
+$ ./bin/terminal.sh
+# apt install name_package
 ```
 
 ### Dans Dockerfile
