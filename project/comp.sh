@@ -4,6 +4,17 @@
 
 #!/bin/sh
 
+cd ${0%/*}
+
+while read line  
+do
+    if [[ "$line" =~ .*"=".* ]]; then
+        export "$line"
+    fi
+done < ${0%/*}/.env
+
+rm -rf dist
+mkdir dist
 rm -rf bin
 mkdir bin
 rm -rf build
